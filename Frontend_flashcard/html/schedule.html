@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Flashcard</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="../css/scheduleStyle.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Schedule Flashcard</h1>
+    </header>
+
+    <!-- Main Container -->
+    <div class="schedule-container">
+        <form id="schedule-form">
+            <div class="form-group">
+                <label for="starting-date">Starting Date</label>
+                <input type="date" id="starting-date" name="starting-date" required>
+            </div>
+            <div class="form-group">
+                <label for="number-of-days">Number of Days Want to Study</label>
+                <input type="number" id="number-of-days" name="number-of-days" required>
+            </div>
+            <div class="form-group">
+                <label for="study-time">Study Time</label>
+                <input type="time" id="study-time" name="study-time" required>
+            </div>
+            <button type="submit">Create Schedule</button>
+        </form>
+
+        <!-- Table to display created schedules -->
+        <div id="schedules-table">
+            <h2>Created Schedules</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Starting Date</th>
+                        <th>No. of Days for Study</th>
+                        <th>Study Time</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="schedules-list">
+                    <!-- Schedules will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Link to your JavaScript file -->
+    <script src="../js/scheduleScript.js"></script>
+</body>
+</html>

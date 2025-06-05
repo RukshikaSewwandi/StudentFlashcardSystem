@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subtopic - Flashcard System</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="../css/subtopicStyle.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Personalized Flashcard System</h1>
+        <div class="search-icon">
+            <i class="bx bx-search-alt-2" id="search-icon"></i>
+        </div>
+        <div class="search-box">
+            <input type="search" placeholder="Search Here....." />
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="home-container">
+        <!-- Side Navigation Bar -->
+        <div class="side-nav">
+            <ul>
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="todaystask.html">Today's Task</a></li>
+                <li><a href="Calender.html">Calendar</a></li>
+                <!--<li><a href="completedFlashcards.html">Completed</a></li>-->
+            </ul>
+            <button id="add-subtopic">Add Subtopic</button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h2 id="subject-name">Subject Name</h2>
+            <p>Add subtopics to your subject</p>
+            <div id="subtopics-list">
+                <!-- Subtopics will be dynamically added here -->
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Popup Dialog Box for Adding Subtopic -->
+    <div id="add-subtopic-dialog" class="custom-dialog">
+        <div class="dialog-content">
+            <h3>Create Subtopic</h3>
+            <input type="text" id="subtopic-name" placeholder="Enter Subtopic Name" />
+            <div class="dialog-buttons">
+                <button id="cancel-subtopic-btn">Cancel</button>
+                <button id="create-subtopic-btn">Create</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to your JavaScript file -->
+    <script src="../js/subtopicscript.js"></script>
+</body>
+</html>

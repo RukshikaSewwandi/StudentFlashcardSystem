@@ -1,0 +1,359 @@
+/* Table styles for event popup */
+.event-popup table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.event-popup th, .event-popup td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.event-popup th {
+    background-color: #f4f4f4;
+}
+
+/* Trash icon in table */
+.event-popup .delete-icon {
+    color: red;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.event-popup .delete-icon:hover {
+    color: darkred;
+}
+
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f4f4f4;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Navigation */
+.main-nav {
+    background: #333;
+    padding: 15px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #f9ca24;
+}
+
+/* Calendar Controls */
+.calendar-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-controls button {
+    background: #4a69bd;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.calendar-controls button:hover {
+    background: #1e3799;
+}
+
+/* Calendar Grid */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background: #f0f0f0;
+}
+
+.calendar-day {
+    border: 1px solid #eee;
+    min-height: 100px;
+    padding: 8px;
+    position: relative;
+}
+
+.date-number {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    font-weight: bold;
+}
+
+.other-month {
+    background: #f9f9f9;
+    color: #aaa;
+}
+
+.today {
+    background: #e3f2fd;
+}
+
+.event-dot {
+    width: 8px;
+    height: 8px;
+    background: #4a69bd;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 3px;
+}
+
+.event-list {
+    margin-top: 25px;
+    font-size: 12px;
+}
+
+.event-item {
+    margin-bottom: 3px;
+    padding: 3px;
+    border-radius: 3px;
+    background: #f0f8ff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 60%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background: #4a69bd;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button[type="submit"]:hover {
+    background: #1e3799;
+}
+
+#events-list {
+    margin-bottom: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.event-item-full {
+    padding: 10px;
+    background: #f0f8ff;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.event-time {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.event-title {
+    font-weight: bold;
+}
+
+.event-description {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.delete-event {
+    color: red;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.delete-event:hover {
+    color: darkred;
+}
+
+/* View Icon */
+.view-icon {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #4a69bd;
+}
+
+.view-icon:hover {
+    color: #1e3799;
+}
+
+/* Event Popup */
+.event-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close-popup:hover {
+    color: black;
+}
+
+.popup-event-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #f0f8ff;
+    border-radius: 4px;
+    position: relative;
+}
+
+.popup-event-title {
+    font-weight: bold;
+    display: block;
+}
+
+.popup-event-time {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.popup-event-description {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.delete-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    color: red;
+}
+
+.delete-icon:hover {
+    color: darkred;
+}

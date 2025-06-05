@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Flashcard System</title>
+    <link rel="stylesheet" href="../css/dashboardstyles.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Personalized Flashcard System</h1>
+        <div class="search-icon">
+            <i class="bx bx-search-alt-2" id="search-icon"></i>
+        </div>
+        <div class="search-box">
+            <input type="search" placeholder="Search Here....." />
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="home-container" >
+        <!-- Side Navigation Bar -->
+        <div class="side-nav">
+            <ul>
+                <li><a href="dashbord.html">Home</a></li>
+                <li><a href="todaystask.html">Today's Task</a></li>
+                <!--<li><a href="completedFlashcards.html">Completed</a></li>-->
+                <li><a href="Calender.html">Calendar</a></li>   
+            </ul>
+            <button id="add-subject">Add Subject</button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content" style="background-image: url('../image/background2.jpg'); background-repeat: no-repeat ;
+  background-size: 100% 100%;">
+            <h2>Created Subjects</h2>
+            <div id="subjects-list">
+                <!-- Subjects will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+
+    
+    <!-- Link to your JavaScript file -->
+    <script src="../js/dashboardscript.js"></script>
+</body>
+</html>
